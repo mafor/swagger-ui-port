@@ -20,7 +20,7 @@ import java.io.IOException;
 import java.util.List;
 
 @Component
-public class TomcatContainerCustomizer  implements WebServerFactoryCustomizer<TomcatServletWebServerFactory> {
+public class TomcatContainerCustomizer implements WebServerFactoryCustomizer<TomcatServletWebServerFactory> {
 
     @Value("${swagger.port}")
     private int swaggerPort;
@@ -60,7 +60,7 @@ public class TomcatContainerCustomizer  implements WebServerFactoryCustomizer<To
                     .anyMatch(path -> pathMatcher.match(path, httpServletRequest.getServletPath()));
             boolean isSwaggerPort = httpServletRequest.getLocalPort() == swaggerPort;
 
-            if(isSwaggerPath == isSwaggerPort) {
+            if (isSwaggerPath == isSwaggerPort) {
                 filterChain.doFilter(httpServletRequest, httpServletResponse);
             } else {
                 httpServletResponse.sendError(404);

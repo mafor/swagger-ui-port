@@ -24,7 +24,7 @@ Now Tomcat listens on two ports but it serves the same content on both of them. 
 
 ## Step 2. Adding a filter
 
-Adding a servlet filter is pretty stright-forward with a FilterRegistrationBean.
+Adding a servlet filter is pretty straightforward with a FilterRegistrationBean.
 It can be created anywhere, I added it directly to the TomcatContainerCustomizer.
 ```java
 @Component
