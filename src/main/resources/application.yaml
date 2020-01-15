@@ -1,0 +1,9 @@
+server.port: 8080
+swagger:
+  port: 8088
+  paths: |
+    /swagger-ui.html,
+    /webjars/springfox-swagger-ui/**/*,
+    /swagger-resources,
+    /swagger-resources/**/*,
+    /v2/api-docs
